@@ -33,11 +33,16 @@ One can call hasProperty(), canGetProperty() and/or canSetProperty() to check th
 Можно вызывать методы hasProperty(), canGetProperty() и/или canSetProperty() чтобы проверить существование, возможность получения и/или установки свойства.
 
 Besides the property feature, BaseObject also introduces an important object initialization life cycle. In particular, creating an new instance of BaseObject or its derived class will involve the following life cycles sequentially:
+Кроме функции свойства BaseObject также необходим для инициализации объекта. Фактически при создании нового экземпляра BaseObject или унаследованного класса будет выполнена следующая последовательность:
 
 the class constructor is invoked;
+вызывается класс конструктора;
 object properties are initialized according to the given configuration;
+свойства объекта инициализируются согласно полученной конфигурации;
 the init() method is invoked.
+вызывается метод init().
 In the above, both Step 2 and 3 occur at the end of the class constructor. It is recommended that you perform object initialization in the init() method because at that stage, the object configuration is already applied.
+Выше шаги 2 и 3 осуществляются в конце конструктора класса. Рекомендуется чтобы инициализация объекта выполнялась в методе init() потому что на этом шаге конфигурация объекта уже применена.
 
 In order to ensure the above life cycles, if a child class of BaseObject needs to override the constructor, it should be done like the following:
 
