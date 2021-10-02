@@ -76,23 +76,43 @@ canGetProperty()	Показывает доступно ли свойство д�
 canSetProperty()	Returns a value indicating whether a property can be set.	yii\base\BaseObject
 canSetProperty()	Показывает доступно ли свойство для записи.	 yii\base\BaseObject
 className()	Returns the fully qualified name of this class.	yii\base\BaseObject
+className()	Возвращает полное имя этого класса.	yii\base\BaseObject
 hasMethod()	Returns a value indicating whether a method is defined.	yii\base\BaseObject
+hasMethod()	Показывает определен ли этот метод.	yii\base\BaseObject
 hasProperty()	Returns a value indicating whether a property is defined.	yii\base\BaseObject
+hasProperty()	Показывает определено ли свойство.	yii\base\BaseObject
 init()	Initializes the object.	yii\base\BaseObject
+init()	Инициализирует объект.	yii\base\BaseObject
+
 Method Details
+Детали метода
+
 __call() public method
+__call() открытый метод
 Calls the named method which is not a class method.
+Вызывает именованный метод, который не является методом класса
 
 Do not call this method directly as it is a PHP magic method that will be implicitly called when an unknown method is being invoked.
+Не вызывайте этот метод напрямую как данный метод является магическим методом PHP, который будет неявно вызван при вызове неизвестного метода.
 public mixed __call ( $name, $params )
+
 $name	string	
 The method name
+Имя метода
+
 $params	array	
 Method parameters
+Параметры метода
+
 return	mixed	
 The method return value
+Метод возвращает значение
+
 throws	yii\base\UnknownMethodException	
 when calling unknown method
+Когда вызывается неизвестный метод
+
+
 __construct() public method
 Constructor.
 
