@@ -61,13 +61,20 @@ Public Methods
 Method	Description	Defined By
 Метод Описание Определен в
 __call()	Calls the named method which is not a class method.	yii\base\BaseObject
+__call()	Вызывает именованный метод, который не является методом класса.	yii\base\BaseObject
 __construct()	Constructor.	yii\base\BaseObject
 __get()	Returns the value of an object property.	yii\base\BaseObject
+__get()	Возвращает значение свойства объекта.	yii\base\BaseObject
 __isset()	Checks if a property is set, i.e. defined and not null.	yii\base\BaseObject
+__isset()	Проверяет установлено ли свойство, то есть определено и не равно нулю. 
 __set()	Sets value of an object property.	yii\base\BaseObject
+__set()	Задает значение свойству объекта.	yii\base\BaseObject
 __unset()	Sets an object property to null.	yii\base\BaseObject
+__unset()	Задает свойству объекта нулевое значение.	yii\base\BaseObject
 canGetProperty()	Returns a value indicating whether a property can be read.	yii\base\BaseObject
+canGetProperty()	Показывает доступно ли свойство для чтения.	 yii\base\BaseObject
 canSetProperty()	Returns a value indicating whether a property can be set.	yii\base\BaseObject
+canSetProperty()	Показывает доступно ли свойство для записи.	 yii\base\BaseObject
 className()	Returns the fully qualified name of this class.	yii\base\BaseObject
 hasMethod()	Returns a value indicating whether a method is defined.	yii\base\BaseObject
 hasProperty()	Returns a value indicating whether a property is defined.	yii\base\BaseObject
