@@ -45,6 +45,7 @@ In the above, both Step 2 and 3 occur at the end of the class constructor. It is
 Выше шаги 2 и 3 осуществляются в конце конструктора класса. Рекомендуется чтобы инициализация объекта выполнялась в методе init() потому что на этом шаге конфигурация объекта уже применена.
 
 In order to ensure the above life cycles, if a child class of BaseObject needs to override the constructor, it should be done like the following:
+Чтобы класс BaseObject правильно работал, в случае если конструктор наследника класса BaseObject необходимо переопределить, вы должны выполнить следующее:
 
 public function __construct($param1, $param2, ..., $config = [])
 {
@@ -52,3 +53,4 @@ public function __construct($param1, $param2, ..., $config = [])
     parent::__construct($config);
 }
 That is, a $config parameter (defaults to []) should be declared as the last parameter of the constructor, and the parent implementation should be called at the end of the constructor.
+Параметр $config (по умолчанию []) должен быть определен как последний параметр в конструкторе, и выполнение родительского класса должно вызываться в конце конструктора.
